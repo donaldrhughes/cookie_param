@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Invitation Page</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="invitation.html" class="active">Invitation</a>
+                </li>
+                <li><a href="gallery.html">Gallery</a>
+                </li>
+                <li><a href="registration.html">Registration</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <section id="pageForm">
+        <!-- create a form to submit vol info -->
+        <form id="volForm" action="#">
+            <!-- set all the input names with placeholder info -->
+            <label for="quantity">Quantity (between 1 and 10):</label>
+            <select name="quantity" required="required" form="volForm" autofocus="1" onchange="selectNumber()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              
+            <label for="recipientName">Recipient name:</label>
+            <!-- <input type="text" name="recipientName" placeholder="Enter your Recipient Name" /> -->
+            <div id="addBox"></div>
+            <label for="organizationName">Organization name:
+            </label>
+            <input type="text" name="organizationName" placeholder="Enter your Organization Name" />
+
+            <label for="eventDate">Event Date:
+            </label>
+            <input type="text" name="eventDate" placeholder="Enter your Event Date" />
+
+            <label for="websiteURL">URL:
+            </label>
+            <input type="text" name="websiteURL" placeholder="Enter your Website URL" />
+
+            <label for="hostName">Host name:
+            </label>
+            <input type="text" name="hostName" placeholder="Host Name" />
+            
+            <!-- on Click call the formSubmit function and pass a blank Object as argument -->
+            <input type="submit" onclick="formSubmit({})" value="Submit">
+
+            
+        </form>
+        <!-- variant response div for alternate method -->
+        <div id="showNumber"><div>
+    </section>
+
+<!-- given ids for the DOM replacement -->
+    <article id="art"></article>
+
+    <!-- <article id="placeholderContent">
+        Hello <span id="recipientName">recipientName</span>!
+        <br/>
+        <br/> You have been invited to volunteer for an event held by 
+        <span id="organizationName">organizationName</span> on 
+        <span id="eventDate">eventDate</span>. Please come to the following website: 
+        <span id="websiteURL">websiteURL</span> to sign up as a volunteer.
+        <br/>
+        <br/> Thanks!
+        <br/>
+        <br/>
+        <span id="hostName">hostName</span>
+    </article> -->
+    <!-- <footer>This events site is for IT-FP3215 tasks.
+    </footer> -->
+
+    <script src="js/volunteer.js"></script>
+</body>
+
+</html>
